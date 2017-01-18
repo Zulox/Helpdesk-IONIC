@@ -1,0 +1,84 @@
+
+<ion-view cache-view="false" view-title="#TICKET ID : {{details.TIC_ID}}">
+
+    
+    <ion-content >
+
+<div class="card">
+  <div class="item item-divider">
+    <span class="bold">Subject : </span> {{details.TIC_Subject}}  
+  </div>
+  <div class="item item-text-wrap">
+      <pre>{{details.TIC_Body}}</pre>
+  </div>
+  <div class="item item-divider">
+     <span class="bold">Date submit : </span> {{details.TIC_Date}}
+  </div>
+ <div class="item item-divider">
+     <span class="bold">User ID : </span> {{details.User_ID}}
+  </div>
+</div>
+      
+      
+     
+<div ng-repeat="message in reply" class="message-wrapper">
+      
+                  <div ng-if="message.Type  == 'A' ">
+                      
+                     <img class="profile-pic left" src="{{IP}}{{message.PersonID}}.png">
+      
+                      <div class="chat-bubble left">
+      
+                          <div class="message ng-binding"><pre>{{message.MSG}}</pre>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span class="bold ng-binding">{{message.Name}}</span>, 
+                              <span>{{message.Time}}</span>
+                          </div>
+      
+                      </div>
+                  </div>
+      
+                   <div ng-if="message.Type  === 'B' ">
+                    
+                      <img class="profile-pic right" src="{{IP}}{{message.PersonID}}.png">
+                    
+                      <div class="chat-bubble right">
+      
+                         <div class="message ng-binding"><pre>{{message.MSG}}</pre>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span class="bold ng-binding">{{message.Name}}</span>, 
+                              <span>{{message.Time}}</span>
+                          </div>
+      
+                      </div>
+                    
+                  </div>
+      
+                  <div class="cf"></div>
+      
+</div>
+      
+      
+      
+      
+        
+  </ion-content>
+            
+              <ion-footer-bar style="height: 50px;">
+ 
+                    <div ng-if="paras.state  === 'PENDING' "> 
+                        <button class="button button-large button-balanced footerbutt" style="left: 5px;"  ng-click="showReplyPop()">
+                            Reply
+                        </button>
+                        <button class="button  button-large button-positive footerbutt"  style=" right: 5px;"  ng-click="showSolvePop()">
+                            Mark as Solve
+                        </button>    
+ 
+                    </div>         
+              </ion-footer-bar>
+          
+</ion-view>

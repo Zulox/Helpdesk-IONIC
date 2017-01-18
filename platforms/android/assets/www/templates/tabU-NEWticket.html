@@ -1,0 +1,25 @@
+<ion-view view-title="POST TICKET">
+     <ion-content class="padding">
+        <h4 class="content padding double-padding-x"></h4>
+         <center><h4 class="content padding double-padding-x">New Ticket</h4></center>
+    <div class="list card">
+            <div class="list">
+                  <label class="item item-input item-stacked-label">
+                    <span class="input-label"><b>Subject</b></span>
+                    <input type="text" required placeholder="Problem ...." ng-model="data.subject">
+                  </label>
+                
+                  <label class="item item-input item-stacked-label">
+                       <span class="input-label"><b>Content</b></span>
+                <textarea rows="10" placeholder="Detailed information here" ng-model="data.body"></textarea>
+                </label>
+                
+       
+
+            </div>
+        </div>
+                         <div class="padding">
+            <button class="button button-full button-calm ink"  ng-click="submitTicket()">Submit</button>
+        </div>
+      </ion-content>
+</ion-view>

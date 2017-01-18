@@ -1,0 +1,57 @@
+
+<ion-view  cache-view="false" view-title="User ID  : [ {{paras.chatId}} ]">
+    
+
+  <ion-content class="padding">
+
+       <div ng-repeat="message in reply" class="message-wrapper">
+      
+                  <div ng-if="message.Type  == 'A' ">
+                      
+                     <img class="profile-pic left"  src="{{IP}}{{message.SenderID}}.png">
+      
+                      <div class="chat-bubble left">
+      
+                          <div class="message ng-binding"><pre>{{message.MSG}}</pre>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span class="bold ng-binding">{{message.Name}}</span>
+                              <span>{{message.Time}}</span>
+                          </div>
+      
+                      </div>
+                  </div>
+      
+                   <div ng-if="message.Type  === 'B' ">
+                    
+                      <img class="profile-pic right" src="{{IP}}{{message.SenderID}}.png">
+                    
+                      <div class="chat-bubble right">
+      
+                         <div class="message ng-binding"><pre>{{message.MSG}}</pre>
+                          </div>
+      
+                          <div class="message-detail">
+                              <span class="bold ng-binding">{{message.Name}}</span> 
+                              <span>{{message.Time}}</span>
+                          </div>
+      
+                      </div>
+                    
+                  </div>
+      
+                  <div class="cf"></div>
+      
+</div>
+  </ion-content>
+    
+    <ion-footer-bar keyboard-attach class="bar-stable item-input-inset">
+      <label class="item-input-wrapper">
+        <input type="text" placeholder="Type your message" on-return="sendMessage()" ng-model="data.message" />
+      </label>
+      <button class="button button-clear" ng-click="sendMessage()">
+        Send
+      </button>
+    </ion-footer-bar>
+</ion-view>

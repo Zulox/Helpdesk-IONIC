@@ -1,0 +1,24 @@
+<ion-view cache-view="false" view-title="{{paras.state}} TICKET">
+     <ion-content class="padding">
+<div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input ng-model="searchText" type="text" placeholder="Search">
+          </label>
+        </div>
+          
+        
+       
+         <div class="list card">
+            <ion-item class="item-remove-animate item-icon-right" ng-repeat="saction in tics | filter:searchText"  type="item-text-wrap"
+                      ui-sref="tab.ticketdash.state.state-detail({ ticketDetail: {{saction.TIC_ID}} })" >            
+                <i class="icon ion-chevron-right"></i>
+                <b>{{saction.TIC_Subject}}</b>
+                <h4>{{saction.TIC_Status}}</h4>
+                <h4><strong> Sender :</strong> {{saction.User_ID}}</strong></h4>
+                <h4>{{saction.TIC_Date}}</h4>        
+             </ion-item>             
+</div>
+
+      </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view view-title="Account"  cache-view="false">
+  <ion-content>
+      <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+      
+      
+      <ion-list>
+
+      
+<div class="item">
+   <img class="avatar" ng-src="{{IP}}{{image}}" src="{{IP}}{{image}}">
+    <center>
+        <i class="icon ion-person-stalker"  style="font-size: 30px;"></i>
+        <b style="font-size: 25px;"> {{details.NICK}}</b><br>
+        <span style="font-size: 20px;"> {{details.STATUS}}</span><br>
+    </center> 
+</div>
+
+
+
+<button class="button button-full button-energized" ng-click="ChangeDisplay()">
+   <i class="icon ion-images"> </i> Change Profile Picture
+</button>
+        
+<button class="button button-full button-balanced" ng-click="showChangeName()" >
+   <i class="icon ion-person"> </i> Change Display Name
+</button>
+        
+<button class="button button-full button-royal" ng-click="showChangeStatus()" >
+   <i class="icon ion-ios-chatboxes-outline"> </i> Change Status
+</button>  
+      
+<button class="button button-full button-calm " ng-click="showChangePass()">
+  <i class="icon ion-locked"> </i>  Change Password
+</button>
+        
+<button class="button button-full button-assertive" ng-click="LogOut()">
+   LOG OUT
+</button> 
+
+    </ion-list>
+  </ion-content>
+</ion-view>

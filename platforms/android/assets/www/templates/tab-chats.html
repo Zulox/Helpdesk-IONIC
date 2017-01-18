@@ -1,0 +1,18 @@
+<ion-view  cache-view="false" view-title="Chats">
+   <ion-content >
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.User_ID}}">
+        <img ng-src="{{IP}}{{chat.User_ID}}.png">
+        <h2>{{chat.User_Name}}</h2>
+          <p>{{chat.User_Status}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+
+
+        
+       

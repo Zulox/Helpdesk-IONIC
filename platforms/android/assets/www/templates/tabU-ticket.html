@@ -1,0 +1,21 @@
+<ion-view  cache-view="false" view-title="Ticket">
+  <ion-content>
+
+              <a class="item item-icon-left" href="#/tabU/Uticket/PENDING">
+                <i class="icon ion-minus"></i>
+                My Pending Ticket
+                <span class="badge badge-assertive">{{count.pending}}</span>
+              </a>
+      
+              <a class="item item-icon-left" href="#/tabU/Uticket/SOLVED">
+                <i class="icon ion-checkmark"></i>
+                Solved Ticket
+                <span class="badge badge-assertive">{{count.solved}}</span>
+              </a>
+      
+              <button class="button button-full button-balanced" ui-sref="tabU.NewTicket">
+                <i class="icon ion-star"> </i> Post New Ticket
+              </button> 
+
+  </ion-content>
+</ion-view>

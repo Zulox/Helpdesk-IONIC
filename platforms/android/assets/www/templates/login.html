@@ -1,0 +1,34 @@
+<ion-view cache-view="false" view-title="Login" name="login-view">
+  <ion-content class="padding">
+      
+      <img class="avatar" src="img/head.png">
+      
+      <div class="list list-inset">
+          <label class="item item-input">
+                   
+                        <input type="text" placeholder="Username" required ng-model="data.username"/>
+                        </label>
+              
+          
+                <label class="item item-input">
+              <input type="password" placeholder="Password" required  ng-model="data.password" />
+               </label>
+          
+
+ 
+      </div>
+                      <select ng-model="data.access" >
+                  <option value="USER" >Users</option>
+                  <option value="ADMIN" >Admin</option>
+                </select>
+      <button class="button button-block button-balanced" ng-click="logins()">Login</button>
+      
+      <center>Not a Member? Signup now!</center>
+      <button class="button button-block button-positive" ng-click="signup()">Sign Up</button>
+     <br><br><br><br>
+      
+      <p>For presentation purposes**</p>
+      <p>Current IP: </p> {{showip}}<br>
+      <button class="button button-block button-assertive" ng-click="myPopup()">IP Config</button>
+  </ion-content>
+</ion-view>

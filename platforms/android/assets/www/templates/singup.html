@@ -1,0 +1,34 @@
+<ion-view cache-view="false" view-title="Sign Up" name="login-view">
+  <ion-content class="padding">
+ <form name="myForm" novalidate>
+        <div class="list">
+           <label class="item item-input item-stacked-label">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="Your login username" name="username" ng-model="data.username" ng-minlength="5" required>
+            </label>
+               <label class="item item-input item-stacked-label">
+                <span class="input-label">Display Name</span>
+                <input type="text" placeholder="Your system display name" name="displayname" ng-model="data.displayname" ng-minlength="5" required>
+            </label>
+            
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Your login password" name="password" ng-model="data.password" ng-minlength="6" required>
+            </label>
+        </div>
+        <div class="padding">
+            <p class="errorred" ng-show="myForm.username.$error.required">* Username is required</p>
+            <p class="errorred" ng-show="myForm.username.$error.minlength">* Username must be longer than 5 characters</p>
+            <p class="errorred" ng-show="myForm.displayname.$error.required">* Display name is required</p>
+            <p class="errorred" ng-show="myForm.displayname.$error.minlength">* Display name must be longer than 5 characters</p>            
+            <p class="errorred" ng-show="myForm.password.$error.required">* Password is required</p>
+            <p class="errorred" ng-show="myForm.password.$error.minlength">* Password must be longer than 6 characters</p>
+        </div>
+        <div class="padding">
+            <button type="button" class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="submit()">Submit</button>
+            <button type="button" class="button button-block button-positive" ng-click="test()">Test</button>
+            
+        </div>
+    </form>
+  </ion-content>
+</ion-view>
